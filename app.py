@@ -1,7 +1,6 @@
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 from pymongo import MongoClient
-from bcrypt import gensalt, hashpw
 import os
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
@@ -214,4 +213,4 @@ def verifyEncryptionPassword():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
